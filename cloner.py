@@ -67,7 +67,6 @@ def populate(pathsOfFolders, SDIR, TDIR):
     pathsOfFiles, listOfFiles = discoverFiles(SDIR, pathsOfFolders)
     for index, file in enumerate(listOfFiles):
         file = str(TDIR + file)
-        print(pathsOfFiles[index])
         command = str("cmd /c \" mklink /H " + "\"" + file + "\" \"" + pathsOfFiles[index] + "\" \"")
         os.system(command)
 
