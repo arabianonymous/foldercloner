@@ -22,13 +22,13 @@ def obtainDirectories(TYPE, DirToMatch):
                     directory = choice
             elif os.path.samefile(directory, DirToMatch):
                 print("The clone folder can't be the same as the original folder. Please try again...")
-                directory = str(input(prompt)).strip("\\")
+                directory = str(input(prompt)).strip("\\").strip("/")
             else:
                 dirValid = True
 
         else:
             print("Directory doesn't exist or insufficient permissions. Please try again...")
-            directory = str(input(prompt)).strip("\\")
+            directory = str(input(prompt)).strip("\\").strip("/")
             
     return directory
 
